@@ -27,7 +27,7 @@ app.get('/', (req, res) => {
         </style>
     </head>
     <body>
-        <h1>Blue Background</h1>
+        <h1>Simple Node.js </h1>
     </body>
     </html>
   `);
