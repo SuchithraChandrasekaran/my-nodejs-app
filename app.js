@@ -11,7 +11,7 @@ app.get('/', (req, res) => {
         <title>Simple Node-js App</title>
         <style>
             body {
-                background: blue;
+                background: peachpuff;
                 margin: 0;
                 padding: 0;
                 height: 100vh;
