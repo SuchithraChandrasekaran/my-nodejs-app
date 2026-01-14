@@ -2,33 +2,38 @@ const express = require('express');
 const app = express();
 const PORT = process.env.PORT || 8080;
 
-// Middleware
-app.use(express.json());
-
-// Routes
+// Single route - blue background
 app.get('/', (req, res) => {
-  res.json({
-    message: 'Welcome to Simple Node.js App!',
-    status: 'success',
-    timestamp: new Date().toISOString(),
-    environment: process.env.NODE_ENV || 'development'
-  });
-});
-
-app.get('/health', (req, res) => {
-  res.status(200).json({ status: 'healthy' });
-});
-
-app.get('/api/greet', (req, res) => {
-  const name = req.query.name || 'Guest';
-  res.json({
-    message: `Hello, ${name}!`,
-    timestamp: new Date().toISOString()
-  });
+  res.send(`
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>Simple Node-js App</title>
+        <style>
+            body {
+                background: blue;
+                margin: 0;
+                padding: 0;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-family: Arial;
+            }
+            h1 {
+                font-size: 48px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Blue Background</h1>
+    </body>
+    </html>
+  `);
 });
 
 // Start server
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
-  console.log(`Environment: ${process.env.NODE_ENV || 'development'}`);
 });
