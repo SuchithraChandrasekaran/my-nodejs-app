@@ -15,3 +15,12 @@ exports.handler = async (event) => {
         })
     };
 };
+
+if (require.main === module) {
+    exports.handler({})
+        .then(result => {
+            console.log('Test Result:');
+            console.log(result);
+        })
+        .catch(err => console.error('Error:', err));
+}
