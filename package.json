@@ -2,7 +2,7 @@
   "name": "my-nodejs-app",
   "version": "1.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "lambda-handler.js",
   "scripts": {
     "test": "echo \"Running tests...\" && echo \"All tests passed!\" && exit 0"
   },
